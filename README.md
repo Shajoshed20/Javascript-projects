@@ -1,0 +1,1 @@
+This repository contains my work and thought process during the Urbanite project under ALX Gig at a startup venture
