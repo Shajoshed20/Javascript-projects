@@ -1,0 +1,1 @@
+This folder contains react applications for trials and skill improvement
