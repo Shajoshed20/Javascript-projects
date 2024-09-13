@@ -1,1 +1,1 @@
-This repository contains my work and thought process during the Urbanite project under ALX Gig at a startup venture
+This repository contains my work trials in creating apps using JavaScript and React
