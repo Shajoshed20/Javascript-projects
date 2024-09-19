@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object</title>
+</head>
+<body>
+    <h1>My first heading</h1>
+</body>
+<script>
+    const name = {};
+
+    name["firstName"] = "Ojo";
+    name.lastName = "Adebayo";
+    name.age = 25;
+    name.eyeColour = "Brown";
+    //fullName to store function for firstName and lastName in uppercase
+    name.fullName = function(){return (this.firstName + " " + this.lastName).toUpperCase()};
+
+    let text = "My name is " + name.fullName() + "." + " I am " + name.age + " with " + name.eyeColour + " eye colour.";
+
+    //Display sentence with Object properties and functions
+    console.log(text);
+
+    //Reassign name Object to person
+    const person = name;
+
+    //Change value stored in age key
+    person.age = 10;
+    console.log(person);
+
+    //Display data type of person variable
+    console.log((typeof(person)).toUpperCase());
+
+    //Display the properties of person object in a loop
+    let text2 = "";
+    for (let key in person) {
+        text2 += key + ": " + person[key] + "\n";
+    }
+    console.log(text2);
+
+    //Creates an array from the property values
+    console.log(Object.values(person));
+
+    //To display objects in loops
+    for (let [key, value] of Object.entries(person)) {
+        console.log(key + "; " + value);
+    }
+
+    // Stringify Object
+    let myString = JSON.stringify(person);
+    console.log(myString);
+
+</script>
+</html>

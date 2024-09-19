@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructors</title>
+</head>
+<body>
+    <h1>Object Constructors</h1>
+    <p>Object constructors are a way to create objects in JavaScript. They are used to create objects of the 
+        same type</p>
+</body>
+<script>
+    //Obj. Constructor Function to create Person object type
+    function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+
+        //Adding a default value to Person property Nationality
+        this.nationality = "Nigerian";
+
+        //fullName to store function for firstName and lastName in uppercase
+    name.fullName = function(){return (this.firstName + " " + this.lastName)};
+    }
+
+    //Create a Person object
+    const name = new Person("Bayo", "Olusi", 15, "Black");
+    console.log(name);
+
+    const hisFather = new Person("John", "Olusi", 50, "blue");
+    const hisMother = new Person("Sally", "Olusi", 48, "green");
+    const hisSister = new Person("Anna", "Olusi", 18, "green");
+
+    console.log(name.firstName + "'s sister, " + hisSister.firstName + ", is a " + name.nationality);
+
+    //Adding new property to hisFather but not object constructor
+    hisFather.occupation = "Engineer";
+    console.log("His father ," + hisFather.firstName + ", is an " + hisFather.occupation);
+
+    //Cannot add to obj. constructor but only as a prototype
+   Person.prototype.status = "Married"
+   console.log(name.status);
+
+</script>
+</html>
